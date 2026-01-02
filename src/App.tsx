@@ -1,0 +1,95 @@
+import { lazy, Suspense } from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import { ThemeProvider } from "@/components/theme-provider";
+
+// Eagerly load the main landing page for fast initial render
+import Index from "./pages/Index";
+
+// Lazy load other pages - they load on demand when navigated to
+const Asistente = lazy(() => import("./pages/Asistente"));
+const AsistenteExpediente = lazy(() => import("./pages/AsistenteExpediente"));
+const AsistenteConfirmacion = lazy(() => import("./pages/AsistenteConfirmacion"));
+const Privacidad = lazy(() => import("./pages/Privacidad"));
+const AvisoLegal = lazy(() => import("./pages/AvisoLegal"));
+const Cookies = lazy(() => import("./pages/Cookies"));
+const SignIn = lazy(() => import("./pages/SignIn"));
+const SignUp = lazy(() => import("./pages/SignUp"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Page loading fallback
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="flex flex-col items-center gap-4">
+      <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+      <p className="text-muted-foreground text-sm">Cargando...</p>
+    </div>
+  </div>
+);
+
+const queryClient = new QueryClient();
+
+// JSON-LD Schema para SEO
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "[NOMBRE_EMPRESA_PLACEHOLDER]",
+  "description": "Servicio de diagnóstico técnico de patologías en viviendas con revisión humana. Humedades, grietas, filtraciones y más.",
+  "url": "[URL_PLACEHOLDER]",
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "serviceType": "Diagnóstico de patologías en vivienda",
+  "priceRange": "€-€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES",
+    "addressLocality": "[CIUDAD_PLACEHOLDER]"
+  }
+};
+
+const App = () => (
+  <HelmetProvider>
+    <ThemeProvider defaultTheme="system" storageKey="diagnostico-theme">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Helmet>
+          <html lang="es" />
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#3d8a7e" />
+          <link rel="canonical" href="[URL_PLACEHOLDER]" />
+          <script type="application/ld+json">
+            {JSON.stringify(jsonLdSchema)}
+          </script>
+        </Helmet>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/login" element={<SignIn />} />
+              <Route path="/registro" element={<SignUp />} />
+              <Route path="/asistente" element={<Asistente />} />
+              <Route path="/asistente/expediente/:id" element={<AsistenteExpediente />} />
+              <Route path="/asistente/confirmacion" element={<AsistenteConfirmacion />} />
+              <Route path="/privacidad" element={<Privacidad />} />
+              <Route path="/aviso-legal" element={<AvisoLegal />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
+  </HelmetProvider>
+);
+
+export default App;

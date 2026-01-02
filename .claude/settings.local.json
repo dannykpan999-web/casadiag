@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python optimize_media.py:*)"
+    ]
+  }
+}

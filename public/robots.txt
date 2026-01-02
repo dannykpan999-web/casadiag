@@ -1,0 +1,11 @@
+# robots.txt para Diagnóstico Técnico de Patologías
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://diagnosticotecnico.es/sitemap.xml
+
+# Directorios privados
+Disallow: /api/
+Disallow: /admin/

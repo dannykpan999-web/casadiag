@@ -109,12 +109,13 @@ export function AvatarHowItWorksSection() {
                   className={cn(
                     "relative rounded-2xl overflow-hidden",
                     "bg-gradient-to-br from-primary/20 to-primary/5",
-                    "ring-4 ring-primary/30 shadow-2xl shadow-primary/20"
+                    "ring-4 ring-primary/30 shadow-2xl shadow-primary/20",
+                    "aspect-[9/16]"
                   )}
                 >
                   <video
                     ref={videoRef}
-                    className="w-full object-contain"
+                    className="absolute inset-0 w-full h-full object-cover"
                     playsInline
                     preload="metadata"
                     onEnded={handleVideoEnd}

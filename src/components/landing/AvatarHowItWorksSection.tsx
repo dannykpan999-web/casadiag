@@ -114,12 +114,15 @@ export function AvatarHowItWorksSection() {
                 >
                   <video
                     ref={videoRef}
-                    src="/videos/como-funciona.mp4"
                     className="w-full object-contain"
                     playsInline
+                    preload="metadata"
                     onEnded={handleVideoEnd}
                     onClick={togglePlay}
-                  />
+                    poster="/videos/como-funciona.mp4#t=0.1"
+                  >
+                    <source src="/videos/como-funciona.mp4" type="video/mp4" />
+                  </video>
 
                   {/* Play overlay when paused */}
                   {!isPlaying && (

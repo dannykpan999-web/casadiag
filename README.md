@@ -1,19 +1,19 @@
 # CasaDiag - Diagnóstico de Patologías de Vivienda
 
-Plataforma web de diagnóstico experto para patologías de viviendas en España. Los usuarios interactúan con un avatar IA para diagnosticar problemas de construcción, subir evidencias y recibir informes de expertos.
+Plataforma web de diagnóstico experto para patologías de viviendas en España. Los usuarios interactúan con un asistente IA para diagnosticar problemas de construcción, subir evidencias y recibir informes de expertos.
 
 ## Tecnologías
 
 - **Frontend**: React 18 + TypeScript + Vite
 - **UI**: shadcn-ui (Radix) + Tailwind CSS
-- **IA**: HeyGen Streaming Avatar + OpenAI API
+- **IA**: OpenAI API
 - **Estado**: TanStack React Query + React Hook Form + Zod
 - **Routing**: React Router v6
 
 ## Requisitos Previos
 
 - Node.js 18+ y npm
-- Claves API de HeyGen y OpenAI
+- Clave API de OpenAI
 
 ## Instalación
 
@@ -34,7 +34,6 @@ cp .env.example .env
 
 | Variable | Descripción | Requerida |
 |----------|-------------|-----------|
-| `VITE_HEYGEN_API_KEY` | Clave API de HeyGen para avatar interactivo | Sí |
 | `VITE_OPENAI_API_KEY` | Clave API de OpenAI para respuestas IA | Sí |
 | `VITE_CLIENT_EMAIL` | Email para notificaciones | Sí |
 | `VITE_WEBHOOK_URL` | URL webhook para notificaciones (Zapier/Make) | No |
@@ -58,7 +57,7 @@ src/
 │   ├── landing/     # Secciones de landing page
 │   ├── asistente/   # UI del asistente de diagnóstico
 │   └── chat/        # Widget de chat
-├── services/chat/   # Integraciones API (HeyGen, OpenAI, EmailJS)
+├── services/chat/   # Integraciones API (OpenAI, EmailJS)
 ├── hooks/           # Hooks personalizados de React
 ├── types/           # Definiciones TypeScript
 └── lib/             # Utilidades

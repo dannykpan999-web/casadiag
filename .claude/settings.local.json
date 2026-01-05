@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python optimize_media.py:*)"
+      "Bash(python optimize_media.py:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

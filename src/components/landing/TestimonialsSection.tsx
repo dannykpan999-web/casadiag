@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: "María García López",
     role: "Propietaria en Valencia",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
     quote: "El diagnóstico me ayudó a entender exactamente el problema de humedad en mi vivienda. Muy profesional y claro en las explicaciones.",
     rating: 5,
     pathology: "Humedades",
@@ -15,7 +15,7 @@ const testimonials = [
     id: 2,
     name: "Carlos Rodríguez Martín",
     role: "Administrador de fincas",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
     quote: "Gestiono varias comunidades y este servicio me ha permitido documentar casos de forma eficiente. Los informes son muy completos.",
     rating: 5,
     pathology: "Grietas",
@@ -24,7 +24,7 @@ const testimonials = [
     id: 3,
     name: "Ana Fernández Ruiz",
     role: "Propietaria en Alicante",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop&crop=face",
     quote: "Tenía filtraciones en el techo y no sabía qué hacer. El informe técnico me dio la claridad que necesitaba para actuar.",
     rating: 5,
     pathology: "Filtraciones",
@@ -33,7 +33,7 @@ const testimonials = [
     id: 4,
     name: "José Luis Martínez",
     role: "Abogado en Madrid",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
     quote: "Necesitaba documentación técnica para un procedimiento judicial. El informe fue impecable y muy bien estructurado.",
     rating: 5,
     pathology: "Vicios constructivos",
@@ -42,7 +42,7 @@ const testimonials = [
     id: 5,
     name: "Laura Sánchez Pérez",
     role: "Propietaria en Castellón",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=150&h=150&fit=crop&crop=face",
     quote: "Detectaron moho en una habitación y gracias al diagnóstico pude tomar las medidas correctas. Servicio excelente.",
     rating: 5,
     pathology: "Moho",
@@ -51,7 +51,7 @@ const testimonials = [
     id: 6,
     name: "Pedro Navarro Gil",
     role: "Propietario en Valencia",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     quote: "Las grietas en mi fachada me preocupaban mucho. El técnico explicó todo de forma clara y sin alarmismos innecesarios.",
     rating: 5,
     pathology: "Fachadas",
@@ -159,8 +159,8 @@ export function TestimonialsSection() {
 
         {/* Scrolling Track */}
         <div className="testimonials-carousel flex gap-6 py-4">
-          {duplicatedTestimonials.map((testimonial, index) => (
-            <TestimonialCard key={`${testimonial.id}-${index}`} testimonial={testimonial} />
+          {duplicatedTestimonials.map((testimonial, idx) => (
+            <TestimonialCard key={`${testimonial.id}-${idx}`} testimonial={testimonial} />
           ))}
         </div>
       </div>

@@ -115,7 +115,7 @@ export function AvatarHowItWorksSection() {
                   <video
                     ref={videoRef}
                     src="/videos/como-funciona.mp4"
-                    className="w-full aspect-video object-cover"
+                    className="w-full object-contain"
                     playsInline
                     onEnded={handleVideoEnd}
                     onClick={togglePlay}

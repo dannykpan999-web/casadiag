@@ -372,7 +372,7 @@ export function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
         </div>
 
         <div className="flex flex-wrap gap-2 mt-3">
-          {["¿Cuánto cuesta?", "¿Cómo funciona?", "Tengo humedades"].map((question) => (
+          {["¿Cuánto cuesta?", "¿Cómo funciona?", "Tengo un problema"].map((question) => (
             <button
               key={question}
               type="button"

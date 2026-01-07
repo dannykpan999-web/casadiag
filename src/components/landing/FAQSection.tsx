@@ -73,17 +73,17 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className={`card-institutional card-glow overflow-hidden border px-0 transition-all duration-500 ease-out ${
+                className={`card-institutional card-glow border rounded-lg transition-all duration-500 ease-out ${
                   accordionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: accordionVisible ? `${index * 80}ms` : "0ms" }}
               >
-                <AccordionTrigger className="px-4 md:px-6 py-3 md:py-4 text-left hover:no-underline [&[data-state=open]]:bg-accent/50 transition-colors duration-200">
+                <AccordionTrigger className="px-4 md:px-6 py-4 text-left [&[data-state=open]]:bg-accent/50 transition-colors duration-200">
                   <span className="font-medium text-sm md:text-base">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-4 md:px-6 pb-3 md:pb-4 pt-2 text-xs md:text-sm text-muted-foreground">
+                <AccordionContent className="px-4 md:px-6 pb-4 pt-2 text-xs md:text-sm text-muted-foreground">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

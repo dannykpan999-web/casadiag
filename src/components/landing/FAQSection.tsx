@@ -10,37 +10,37 @@ const faqs = [
   {
     question: "¿Qué problemas cubre este servicio?",
     answer:
-      "El servicio cubre las patologías más comunes en viviendas: humedades, filtraciones, condensación, moho, grietas, fisuras, movimientos estructurales, problemas en cubiertas y terrazas, y deficiencias en fachadas y puentes térmicos. Si tu problema no encaja en estas categorías, el asistente te lo indicará.",
+      "Ofrecemos orientación técnica para ayudarte a entender las patologías más comunes en viviendas, como: fisuras finas en paredes (superficiales o con posible origen estructural), humedades, moho por condensación, filtraciones de agua, fugas, y daños en acabados e instalaciones relacionados con la humedad. El asistente identifica causas probables, evalúa la urgencia y te indica los pasos a seguir, sin alarmismos ni reparaciones innecesarias.",
   },
   {
-    question: "¿Qué evidencia conviene subir?",
+    question: "¿Qué evidencia debo subir?",
     answer:
-      "Fotos claras de la zona afectada (con buena iluminación), vídeos si hay goteo o movimiento activo, fotos panorámicas para contextualizar la ubicación, y cualquier documentación previa si existe. El asistente te guiará sobre qué evidencias son más útiles para tu caso concreto.",
+      "Puedes subir hasta 10 fotos nítidas y bien iluminadas de la zona afectada y 1–2 vídeos cortos opcionales para dar contexto. La evidencia debe evitar el desenfoque y los primeros planos excesivos. Si hay fisuras, deben verse finas y reales: la IA no las exagerará. Cuanto más clara sea la evidencia, más preciso será el análisis.",
   },
   {
     question: "¿Cuánto tiempo tarda el proceso?",
     answer:
-      "La recopilación de información y el pre-diagnóstico en pantalla tardan entre 3 y 6 minutos, dependiendo de la cantidad de evidencias. Si solicitas un informe, el plazo de entrega depende del tipo de servicio contratado y la complejidad del caso.",
+      "El análisis guiado del asistente suele tardar 3 a 5 minutos. Si después solicitas el pack con informe PDF firmado, la revisión humana y la entrega digital se realizan en menos de 24 horas, dependiendo de la carga de trabajo y de la calidad de la evidencia aportada.",
   },
   {
     question: "¿El informe se envía automáticamente?",
     answer:
-      "No. El informe nunca se envía automáticamente. Primero se genera un borrador asistido por IA, y después un técnico lo revisa obligatoriamente antes de su emisión. Solo tras esta validación humana se procede al envío.",
+      "No. Todos los informes PDF de pago son revisados, validados y firmados digitalmente por un técnico colegiado antes de entregarse. El asistente te da una primera orientación gratuita en pantalla, pero ningún informe se emite sin revisión experta obligatoria.",
   },
   {
     question: "¿Cómo funciona el pago?",
     answer:
-      "Utilizamos un sistema de autorización y captura. Cuando solicitas un informe de pago, se autoriza el importe en tu tarjeta (sin cargarlo). Solo cuando el informe ha sido revisado y entregado, se captura el pago. Si por algún motivo no pudiéramos entregar el informe, la autorización se libera automáticamente.",
+      "Solo pagas si decides continuar tras el análisis gratuito. En el pack de 90 € + IVA, el pago se autoriza al solicitar el informe, pero solo se cobra tras la entrega. Recibirás siempre justificante de contratación del servicio y comprobante de pago. El procesamiento es seguro y cumple con RGPD.",
   },
   {
     question: "¿Qué pasa con mis datos y evidencias?",
     answer:
-      "Tus datos se tratan conforme al RGPD y la normativa española de protección de datos. Las evidencias se almacenan de forma segura con acceso temporal controlado. El consentimiento queda registrado. Puedes ejercer tus derechos de acceso, rectificación, supresión y portabilidad en cualquier momento.",
+      "Tus datos y archivos se tratan de forma segura y cifrada, se usan únicamente para el análisis y el informe, con control de acceso, y se eliminan o anonimizan tras el procesamiento según la política de retención. No compartimos información con terceros sin fundamento legal o consentimiento.",
   },
   {
     question: "¿Puedo usarlo como abogado o administrador de fincas?",
     answer:
-      "Sí. Al inicio del proceso seleccionas tu perfil (Particular, Abogado o Administrador de fincas) y el asistente adapta su lenguaje y enfoque. Para abogados, el tono es más formal y técnico. Para administradores, se facilita la gestión de casos recurrentes con trazabilidad.",
+      "Sí. El servicio adapta el enfoque para ayudar a: abogados que necesitan evidencias técnicas y un informe con estructura profesional para procesos legales o seguros, y administradores de fincas que requieren documentar incidencias recurrentes con trazabilidad. Los resultados son rigurosos y organizados para flujos de trabajo profesionales.",
   },
 ];
 

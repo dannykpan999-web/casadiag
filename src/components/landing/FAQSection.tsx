@@ -73,7 +73,7 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className={`card-institutional card-glow border rounded-lg transition-all duration-500 ease-out ${
+                className={`bg-card rounded-lg border shadow-sm transition-all duration-500 ease-out hover:shadow-md ${
                   accordionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"
